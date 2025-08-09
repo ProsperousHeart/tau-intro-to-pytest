@@ -134,5 +134,48 @@ Sometimes extra variations are not necessary to cover desired behaviors. Every t
 
 # Ch 5 - Unit Test Classes
 
+Unit tests are small tests that directly cover functions and methods. More generally - units of work.
+
+In python, any directory with a `__init__.py` file is treated as a package & any modules inside that package can be imported by other modules.
+
+Pytest does not require tests to be in a package. Doing so may have unintended consequences with tools like tox.
+
+properties control how callers get and set values.
+
+Code for this shows that they follow ARRANGE-ACT-ASSERT common method (classic 3 step pattern for functional test cases):
+1. construct an accumulator object
+2. make calls to the object
+3. verify counts are as expected or verify some sort of error
+
+ARRANGE assets for test (setup procedure)
+ACT by asserting target behavior
+ASSERT that expected outcomes happen
+
+This will keep your tests focused & valuable. Also help separate by unique behaviors.
+
+Tests do not act anymore after their assert steps.
+
+Independent atomic tests make failure analysis easier in event of a regression.
+
+## Resources
+
+- [GitHub repository branch for Chapter 5](https://github.com/AutomationPanda/tau-intro-to-pytest/tree/chapter/05-classes)
+
+- [Python classes](https://docs.python.org/3/tutorial/classes.html)
+
+- [Good pytest integration practices](https://docs.pytest.org/en/stable/goodpractices.html)
+
+- [Python property decorator](https://realpython.com/primer-on-python-decorators/)
+
+- [How Python Decorators Function](https://automationpanda.com/2020/10/25/how-python-decorators-function/)
+
+- [tox](https://tox.readthedocs.io/en/latest/)
+
+- [Arrange-Act-Assert: A Pattern for Writing Good Tests](https://automationpanda.com/2020/07/07/arrange-act-assert-a-pattern-for-writing-good-tests/)
+
+# Ch 7 - Fixtures
+
+
+
 ## Resources
 
